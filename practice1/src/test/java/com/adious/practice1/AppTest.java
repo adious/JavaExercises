@@ -22,5 +22,16 @@ public class AppTest
     	assertEquals(true, Fibonacci.IsFibonacciNumber(13));
     }
     
+  @Test
+  	public void testSingleton(){
+        MySingleton obj1 = MySingleton.getInstance();
+		obj1.testMe();
+		
+		MySingleton obj2 = MySingleton.getInstance();
+		obj2.testMe();
+		
+		assertEquals(obj1,obj2);
+		
+  }
 
 }
