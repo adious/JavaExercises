@@ -39,6 +39,27 @@ public class SortCollection {
 		people.forEach(p->System.out.println("Java 8 ---- "+p.getFirtname()+" "+p.getLastname()));
 		
 		
+		//Equal and == concept
+		Person p1 = new Person("ABC","XYZ");
+		Person p2 = new Person("ABC","XYZ");
+		
+		System.out.println(p1.equals(p2)); //true
+		System.out.println(p1==p2); //false
+		System.out.println(p1.hashCode());
+		System.out.println(p2.hashCode());
+		
+		
+		
+		String s1 = "ABC";
+		String s2 = "ABC";
+		
+		System.out.println(s1.equals(s2)); //true
+		System.out.println(s1==s2); //true
+		System.out.println(s1.hashCode());
+		System.out.println(s2.hashCode());
+		
+		
+			
 	
 	}
 	
