@@ -8,4 +8,8 @@ public abstract class AbstractParent implements MyInterface  {
 	public void VolUp(){
 		
 	}
+	
+	public void parentFunction(){
+		System.out.println("Parent function ....");
+	}
 }

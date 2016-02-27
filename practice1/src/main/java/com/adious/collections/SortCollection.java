@@ -12,7 +12,7 @@ public class SortCollection {
 	
 	public static void main(String arg[]){
 	
-		List<Person> people = new ArrayList<Person>();
+		List<Person> people = new ArrayList<>();
 			
 		people.add(new Person("Zorro","shane"));
 		people.add(new Person("John","Don"));
