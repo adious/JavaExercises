@@ -3,6 +3,7 @@ package com.adious.collections;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.Iterator;
 
 import com.adious.collections.Person;
 import java.util.List;
@@ -12,13 +13,18 @@ public class SortCollection {
 	
 	public static void main(String arg[]){
 	
+		//List allow duplicate elements
+		
 		List<Person> people = new ArrayList<>();
 			
-		people.add(new Person("Zorro","shane"));
-		people.add(new Person("John","Don"));
-		people.add(new Person("Shaun","Paul"));
-		people.add(new Person("M","Abdul"));
-				
+		people.add(new Person("Zorro","shane",60));
+		people.add(new Person("John","Don",25));
+		people.add(new Person("Shaun","Paul",32));
+		people.add(new Person("M","Abdul",20));
+		people.add(new Person("M","Abdul",16));
+		people.add(0,new Person("Mr","New guy",80));
+		
+		
 		//java 7 sort
 		people.sort(new Comparator<Person>() {
 			public int compare(Person p1, Person p2){
@@ -28,6 +34,12 @@ public class SortCollection {
 		
 		for(Person p: people){
 			System.out.println("Java 7 ----"+p.getFirtname() +" "+p.getLastname());
+		}
+		
+		Iterator<Person> it = people.iterator();
+		while(it.hasNext()){
+			Person p = it.next();
+			System.out.println(p.getFirtname());
 		}
 		
 		//java 8
