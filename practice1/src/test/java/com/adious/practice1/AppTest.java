@@ -2,6 +2,8 @@ package com.adious.practice1;
 
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
+
+import com.adious.classes.User;
 import com.adious.practice1.Fibonacci;
 
 /**
@@ -33,5 +35,24 @@ public class AppTest
 		assertEquals(obj1,obj2);
 		
   }
+  
+  @Test
+  public void testUserBuilder(){
+	  	User usr = new User.UserBuilder("Uncle","Tom")
+	  			.age(20)
+	  			.phone("1234567")
+	  			.address("UK")
+	  			.build();
+	  	
+	  	assertEquals(usr.getFirstname(),"Uncle");
+  }
 
+  @Test
+  public void testUserBuilderDateOutOfIndex(){
+	  	assertEquals(new User.UserBuilder("Uncle","Tom")
+	  			.age(130)
+	  			.phone("1234567")
+	  			.address("UK")
+	  			.build(),new IllegalStateException("Age out of range"));
+  }
 }

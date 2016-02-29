@@ -17,14 +17,13 @@ public class SortCollection {
 		
 		List<Person> people = new ArrayList<>();
 			
-		people.add(new Person("Zorro","shane",60));
-		people.add(new Person("John","Don",25));
-		people.add(new Person("Shaun","Paul",32));
-		people.add(new Person("M","Abdul",20));
-		people.add(new Person("M","Abdul",16));
-		people.add(0,new Person("Mr","New guy",80));
-		
-		
+		people.add(new Person("Zorro","shane",60,"US"));
+		people.add(new Person("John","Don",25,"PAK"));
+		people.add(new Person("Shaun","Paul",32,"UK"));
+		people.add(new Person("M","Abdul",20,"CHI"));
+		people.add(new Person("M","Abdul",16,"US"));
+		people.add(0,new Person("Mr","New guy",80,"UK"));
+				
 		//java 7 sort
 		people.sort(new Comparator<Person>() {
 			public int compare(Person p1, Person p2){
@@ -52,8 +51,8 @@ public class SortCollection {
 		
 		
 		//Equal and == concept
-		Person p1 = new Person("ABC","XYZ");
-		Person p2 = new Person("ABC","XYZ");
+		Person p1 = new Person("ABC","XYZ","US");
+		Person p2 = new Person("ABC","XYZ","US");
 		
 		System.out.println(p1.equals(p2)); //true
 		System.out.println(p1==p2); //false

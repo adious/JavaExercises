@@ -10,24 +10,38 @@ public class Person {
 	private String firtname;
 	private String lastname;
 	private int age;
+	private String country;
+	
 	
 
-	Person(String firstname,String lastname){
+	Person(String firstname,String lastname,String country){
 		this.firtname = firstname;
 		this.lastname=lastname;
 		this.age=25;
+		this.country=country;
 	}
 
 
-	Person(String firstname,String lastname,int age){
+	Person(String firstname,String lastname,int age,String country){
 		this.firtname = firstname;
 		this.lastname=lastname;
 		this.age=age;
+		this.country=country;
 	}
 
 	
 	public int getAge() {
 		return age;
+	}
+
+
+	public String getCountry() {
+		return country;
+	}
+
+
+	public void setCountry(String country) {
+		this.country = country;
 	}
 
 
@@ -90,12 +104,12 @@ public class Person {
 	
 		List<Person> people = new ArrayList<>();
 		
-		people.add(new Person("Zorro","shane",60));
-		people.add(new Person("John","Don",25));
-		people.add(new Person("Shaun","Paul",32));
-		people.add(new Person("M","Abdul",20));
-		people.add(new Person("M","Abdul",16));
-		people.add(0,new Person("Oldie","Guy",80));
+		people.add(new Person("Zorro","shane",60,"US"));
+		people.add(new Person("John","Don",25,"CHI"));
+		people.add(new Person("Shaun","Paul",32,"PAK"));
+		people.add(new Person("M","Abdul",20,"US"));
+		people.add(new Person("M","Abdul",16,"UK"));
+		people.add(0,new Person("Oldie","Guy",80,"UK"));
 	
 	return people;
 	
@@ -105,14 +119,15 @@ public class Person {
 		
 		Map<String,Person> people = new HashMap<>();
 		
-		people.put("Key 1",new Person("Zorro","shane",60));
-		people.put("Key 2",new Person("John","Don",25));
-		people.put("Key 6",new Person("Shaun","Paul",32));
-		people.put("Key 3",new Person("M","Abdul",20));
-		people.put("Key 5",new Person("M","Abdul",16));
-		people.put("Key 4",new Person("Oldie","Guy",80));
+		people.put("Key 1",new Person("Zorro","shane",60,"US"));
+		people.put("Key 2",new Person("John","Don",25,"CHI"));
+		people.put("Key 6",new Person("Shaun","Paul",32,"PAK"));
+		people.put("Key 3",new Person("M","Abdul",20,"US"));
+		people.put("Key 5",new Person("M","Abdul",16,"UK"));
+		people.put("Key 4",new Person("Oldie","Guy",80,"UK"));
 	
 	return people;
 	
 	}
+	
 }
