@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Peoples>
+	<people>
+		<fullname>firstname 1 lastname 1</fullname>
+	</people>
+	<people>
+		<fullname>firstname 2 lastname 2</fullname>
+	</people>
+	<people>
+		<fullname>firstname 3 lastname 3</fullname>
+	</people>
+	<people>
+		<fullname>firstname 4 lastname 4</fullname>
+	</people>
+	<people>
+		<fullname>firstname 5 lastname 5</fullname>
+	</people>
+
+</Peoples>
