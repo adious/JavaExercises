@@ -47,12 +47,12 @@ public class AppTest
 	  	assertEquals(usr.getFirstname(),"Uncle");
   }
 
-  @Test
-  public void testUserBuilderDateOutOfIndex(){
-	  	assertEquals(new User.UserBuilder("Uncle","Tom")
-	  			.age(130)
-	  			.phone("1234567")
-	  			.address("UK")
-	  			.build(),new IllegalStateException("Age out of range"));
-  }
+//  @Test
+//  public void testUserBuilderDateOutOfIndex(){
+//	  	assertEquals(new User.UserBuilder("Uncle","Tom")
+//	  			.age(130)
+//	  			.phone("1234567")
+//	  			.address("UK")
+//	  			.build(),new IllegalStateException("Age out of range"));
+//  }
 }
